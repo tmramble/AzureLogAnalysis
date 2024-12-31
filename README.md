@@ -1,5 +1,3 @@
-# AzureLogAnalysis
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +35,8 @@
             padding: 10px;
             border-radius: 5px;
             font-family: Consolas, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
     </style>
 </head>
@@ -65,4 +65,34 @@
 
         <h2 id="project-setup">Project Setup</h2>
 
-        <h3 id="admin-mode-configuration-setup">Admin Mode: Configuration & Setu
+        <h3 id="admin-mode-configuration-setup">Admin Mode: Configuration & Setup</h3>
+        <ol>
+            <li><strong>Create a Windows VM in an Azure region outside the US</strong>
+                <ul>
+                    <li><strong>VM Name</strong>: attack-vm</li>
+                    <li><strong>Resource Group</strong>: RG-Cyber-Lab-Attacker</li>
+                    <li><strong>Virtual Network</strong>: Lab-VNet-Attacker</li>
+                </ul>
+            </li>
+            <li><strong>Verify VM Accessibility</strong>
+                <ul>
+                    <li>Log into the VM (attack-vm) to ensure it is functioning as expected.</li>
+                </ul>
+            </li>
+            <li><strong>Retrieve Public IP Address</strong>
+                <ul>
+                    <li>From the Azure Portal, locate and save the public IP address of the windows-vm for use in the next steps.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3 id="attacker-mode-simulated-attacks">Attacker Mode: Simulated Attacks</h3>
+        <ol>
+            <li><strong>Simulate Failed RDP (Remote Desktop Protocol) Login Attempts</strong>
+                <ul>
+                    <li>From attack-vm, attempt to RDP into windows-vm with incorrect credentials (wrong username/password).</li>
+                    <li>Repeat the login attempts with different invalid credentials to simulate a brute force attack.</li>
+                </ul>
+            </li>
+            <li><st
+
